@@ -1,0 +1,66 @@
+:root{--ungu:#8F1A96;--tombol:#A94FA3;--kuning:#FFB800}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lexend',sans-serif;color:#000;background:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* ===== BAGIAN ATAS (gradasi krem -> pink) ===== */
+.auth-atas{
+  position:relative;
+  min-height:775px;
+  padding:20px 24px 60px;
+  background:linear-gradient(180deg,#FFFFFF 0%,#FFF7EA 12%,#F3D9C6 38%,#E8BDB4 62%,#D494A6 100%);
+}
+.kembali{position:absolute;left:30px;top:18px;display:flex;align-items:center;gap:6px;font-size:15px;font-weight:500}
+.kembali svg{width:22px;height:12px}
+.auth-logo{display:block;margin:0 auto;width:210px;height:76px;object-fit:cover;object-position:50% 52.8%}
+.auth-judul{text-align:center;font-weight:500;font-size:38px;margin-top:62px;letter-spacing:-.2px}
+
+form.auth{width:388px;max-width:100%;margin:44px auto 0}
+.auth input{
+  width:100%;height:48px;
+  border:1px solid #bdbdbd;border-radius:3px;background:#fff;
+  padding:0 22px;font:400 15px 'Lexend',sans-serif;color:#333;
+  margin-bottom:40px;
+}
+.auth input::placeholder{color:#666}
+.auth input:focus{outline:2px solid var(--ungu);outline-offset:1px;border-color:var(--ungu)}
+.btn-utama{
+  display:block;width:100%;height:48px;margin-top:10px;
+  background:var(--tombol);color:#fff;border:0;border-radius:3px;
+  font:500 15px 'Lexend',sans-serif;cursor:pointer;transition:background .2s;
+}
+.btn-utama:hover{background:var(--ungu)}
+.atau{display:flex;align-items:center;gap:20px;margin:19px 0 20px;color:#888;font-size:15px}
+.atau::before,.atau::after{content:"";flex:1;height:1px;background:#777}
+.btn-google{
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  width:100%;height:54px;background:#fff;border:1px solid #000;border-radius:3px;
+  font:400 20px 'Lexend',sans-serif;color:#777;cursor:pointer;
+}
+.btn-google svg{width:22px;height:22px}
+.btn-google:hover{background:#faf5fb}
+.pindah{text-align:center;margin-top:22px;font-size:14px;color:#333}
+.pindah a{color:var(--ungu);font-weight:500;text-decoration:underline}
+.pesan{width:388px;max-width:100%;margin:22px auto 0;padding:11px 16px;border-radius:3px;font-size:14px;text-align:center}
+.pesan.error{background:#fde8ea;color:#a1162a;border:1px solid #f2b5bd}
+.pesan.info{background:#fff3cf;color:#6b4e00;border:1px solid #f0d58a}
+.pesan.ok{background:#e6f6e9;color:#1b6b2d;border:1px solid #a9dbb4}
+
+/* ===== KONTAK + FOOTER ===== */
+.kontak{display:flex;justify-content:space-between;gap:40px;padding:36px 68px 0;background:#fff}
+.kontak-info{width:48%}
+.kontak h4{font-weight:500;font-size:24px;margin-bottom:16px}
+.kontak .row{display:flex;align-items:center;gap:10px;font-size:15px;margin-bottom:12px}
+.kontak .row svg{width:22px;height:22px;flex:none}
+.kontak h4.tentang{margin-top:34px;font-size:24px;font-weight:400;margin-bottom:14px}
+.kontak p.desc{font-size:15px;line-height:1.4;max-width:600px}
+.kontak-map{width:46%;height:292px;border-radius:8px;overflow:hidden;background:#f1f1f1}
+.kontak-map iframe{width:100%;height:100%;border:0}
+footer{text-align:center;font-size:13px;padding:90px 0 24px;background:#fff}
+
+@media(max-width:800px){
+  .auth-judul{font-size:26px;margin-top:40px}
+  .kontak{flex-direction:column;padding:30px 6% 0}
+  .kontak-info,.kontak-map{width:100%}
+  footer{padding-top:40px}
+}
