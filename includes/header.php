@@ -23,12 +23,11 @@ $base_url = "http://localhost/Laundry_Bersama_Kelompok_3/";
 <body>
 
     <!-- NAVBAR (Header) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
-        <div class="container-fluid px-5">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center" href="<?= $base_url ?>index.php">
-                <img src="<?= $base_url ?>assets/img/logo.png" alt="Four U Laundry" height="40" class="me-2">
-            </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+    <div class="container-fluid px-5">
+        <a class="navbar-brand d-flex align-items-center p-0" href="<?= $base_url ?>index.php">
+            <img src="<?= $base_url ?>assets/img/logo.png" alt="Four U Laundry" height="60" class="me-2">
+        </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
