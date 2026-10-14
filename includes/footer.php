@@ -1,36 +1,50 @@
 <!-- KONTAK KAMI & FOOTER -->
-    <section class="bg-white py-5" id="kontak">
-        <div class="container px-5">
-            <div class="row align-items-center">
-                <!-- Info Kontak -->
-                <div class="col-md-5 pe-md-5">
-                    <h5 class="fw-bold mb-3">Kontak Kami</h5>
-                    <p class="mb-1"><i class="bi bi-geo-alt-fill text-muted me-2"></i> Jl. Raya Pamayahan, Samping Alfamart, Lohbener - Indramayu</p>
-                    <p class="mb-4"><i class="bi bi-telephone-fill text-muted me-2"></i> 0819 3113 1031</p>
-                    
-                    <h5 class="fw-bold mb-3">Tentang Kami</h5>
-                    <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
-                        Four U Laundry adalah penyedia jasa perawatan pakaian profesional di Indramayu sejak 2015. Berbekal pelatihan khusus dan peralatan modern, kami berkomitmen menghadirkan layanan cuci yang bersih, rapi, dan tepat waktu. Kami mengutamakan kepuasan pelanggan melalui jaminan garansi perawatan dan integritas pelayanan yang tinggi.
-                    </p>
-                </div>
-                <!-- Peta Placeholder -->
-                <div class="col-md-7 text-center">
-                    <div class="bg-light rounded-4 overflow-hidden d-flex align-items-center justify-content-center" style="height: 300px; width: 100%; border: 1px solid #ddd;">
-                         <!-- Jika ada embed google maps sungguhan, taruh iframe di sini -->
-                         <img src="<?= $base_url ?>assets/img/peta_placeholder.png" alt="Peta Lokasi" style="width:100%; height:100%; object-fit: cover;">
-                    </div>
-                </div>
+<footer class="custom-footer pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 pe-lg-5">
+                <h5 class="fw-bold mb-3">Kontak Kami</h5>
+                <ul class="list-unstyled text-muted">
+                    <li class="mb-2 d-flex align-items-start">
+                        <i class="fa-solid fa-location-dot mt-1 me-2 text-dark"></i>
+                        <span>Jl. Raya Pamayahan, Samping Alfamart, Lohbener - Indramayu</span>
+                    </li>
+                    <li class="mb-4 d-flex align-items-center">
+                        <i class="fa-solid fa-phone me-2 text-dark"></i>
+                        <span>0819 3113 1031</span>
+                    </li>
+                </ul>
+
+                <h5 class="fw-bold mb-3 mt-4">Tentang Kami</h5>
+                <p class="text-muted" style="line-height: 1.6; text-align: justify; font-size: 14px;">
+                    Four U Laundry adalah penyedia jasa perawatan pakaian profesional di Indramayu sejak 2015. Berbekal pelatihan khusus dan peralatan modern, kami berkomitmen menghadirkan layanan cuci yang bersih, rapi, dan tepat waktu. Kami mengutamakan kepuasan pelanggan melalui jaminan garansi perawatan dan integritas pelayanan yang tinggi.
+                </p>
+            </div>
+
+            <div class="col-lg-6 col-md-12 mb-4">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.51112725882!2d108.28323167441242!3d-6.3944662625415924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb9bfdcebde83%3A0xfcc1f869366d15fc!2sFOUR%20U%20LAUNDRY!5e1!3m2!1sid!2sid!4v1792018643758!5m2!1sid!2sid"
+                    width="100%"
+                    height="280"
+                    style="border:0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
             </div>
         </div>
-    </section>
 
-    <!-- Copyright -->
-    <div class="text-center py-3 bg-white border-top">
-        <p class="mb-0 text-muted" style="font-size: 13px;">All rights reserved | Four U Laundry</p>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-dark" style="font-size: 13px;">
+                    All rights reserved | Four U Laundry
+                </p>
+            </div>
+        </div>
     </div>
+</footer>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= $base_url ?>assets/js/script.js"></script>
+<!-- Bootstrap Bundle -->
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
