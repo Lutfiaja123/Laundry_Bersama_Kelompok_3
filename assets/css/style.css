@@ -8,10 +8,10 @@ body {
 .main-gradient-bg {
   background: linear-gradient(
     180deg, 
-    rgba(252, 191, 50, 0) 0%,       /* Atas: Transparan sesuai Figma */
-    rgba(215, 122, 140, 0.3) 25%,   /* Tambahan: Sedikit pink pucat di area About Us agar tidak abu-abu */
-    rgba(178, 74, 163, 0.7) 60%,    /* Tambahan: Mulai ungu terang di area Services */
-    #8e1994 100%                    /* Bawah: Ungu Pekat sesuai Figma */
+    rgba(252, 191, 50, 0) 0%,       
+    rgba(215, 122, 140, 0.3) 25%,   
+    rgba(178, 74, 163, 0.7) 60%,    
+    #8e1994 100%                    
   );
 }
 
