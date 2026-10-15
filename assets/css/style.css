@@ -133,3 +133,12 @@ body {
 .custom-footer .text-muted {
     color: #555555 !important;
 }
+
+/* Register dan Login */
+.logo_daftar img{
+  height: 100px; 
+  width: auto;
+
+  transform: scale(1.8);
+  transform-origin:center ;
+}

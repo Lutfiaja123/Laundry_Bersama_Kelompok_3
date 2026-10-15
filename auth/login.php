@@ -56,14 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Four "U" Laundry</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?= $base_url ?>assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a4ab271e04.js" crossorigin="anonymous"></script>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #F5F5F5;
+            padding-top: 0 !important;
         }
 
         .hero-auth {
@@ -153,8 +152,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <a href="<?= $base_url ?>index.php" class="btn-kembali">&larr; Kembali</a>
 
     <div class="text-center">
-        <a href="<?= $base_url ?>index.php">
-            <img src="<?= $base_url ?>assets/img/logo.png" alt="Four U Laundry" class="logo-auth">
+        <a href="<?= $base_url ?>index.php" class="logo_daftar">
+            <img src="../assets/img/logo.png" alt="Four U Laundry" class="logo-auth">
         </a>
     </div>
 
