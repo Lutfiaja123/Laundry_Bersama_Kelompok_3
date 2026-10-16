@@ -47,9 +47,6 @@ body {
 .navbar-brand img{
   height: 60px; 
   width: auto;
-
-  transform: scale(1.8);
-  transform-origin:left center ;
 }
 
 .login-button{
@@ -138,7 +135,4 @@ body {
 .logo_daftar img{
   height: 100px; 
   width: auto;
-
-  transform: scale(1.8);
-  transform-origin:center ;
 }
