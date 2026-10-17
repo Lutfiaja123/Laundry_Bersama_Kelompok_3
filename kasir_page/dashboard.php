@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if (!isset($_SESSION['id_user']) || $_SESSION['role'] !== 'pelanggan') {
+    header("Location: ../auth/login.php");
+    exit;
+}
 require_once '../includes/koneksi.php';
 include '../includes/header.php'; 
 ?>

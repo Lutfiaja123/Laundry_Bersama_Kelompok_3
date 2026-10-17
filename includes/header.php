@@ -1,3 +1,19 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+$base_url = "http://localhost/Laundry_Bersama_Kelompok_3/";
+$is_logged_in = isset($_SESSION['id_user']);
+
+if ($is_logged_in) {
+    $nama_lengkap = $_SESSION['nama'];
+    $nama_pecah = explode(" ", $nama_lengkap);
+    $nama_panggilan = strtolower($nama_pecah[0]); 
+    $role_user = $_SESSION['role'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,11 +58,44 @@
                     </ul>
                 </div>
             </div>
-            <div class="d-flex align-items-center gap-3">
-            <a href="auth/login.php" class="login-button">LOGIN</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+           <div class="d-flex align-items-center gap-3">
+    <?php if ($is_logged_in): ?>
+
+        <div class="dropdown">
+            <button class="btn rounded-pill px-4 py-2 d-flex align-items-center gap-2 shadow-none" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" 
+                    style="background-color: #ffffff; border: 1px solid #d1d5db; color: #4b5563; font-size: 14px; font-weight: 500;">
+                <span class="fw-bold">Hai, <?= htmlspecialchars($nama_panggilan) ?></span>
             </button>
-            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2" aria-labelledby="userMenu" style="border-radius: 12px; font-size: 14px; min-width: 200px;">
+                
+                <?php if ($role_user === 'pelanggan'): ?>
+                    <li><a class="dropdown-item py-2 px-3" href="<?= $base_url ?>pelanggan_page/dashboard.php">Dashboard Saya</a></li>
+                    <li><a class="dropdown-item py-2 px-3" href="<?= $base_url ?>pelanggan_page/pemesanan.php">Buat Pesanan Baru</a></li>
+                <?php elseif ($role_user === 'kasir'): ?>
+                    <li><a class="dropdown-item py-2 px-3" href="<?= $base_url ?>kasir_page/dashboard.php">Dashboard Kasir</a></li>
+                <?php elseif ($role_user === 'superadmin'): ?>
+                    <li><a class="dropdown-item py-2 px-3" href="<?= $base_url ?>superadmin/dashboard.php">Dashboard Admin</a></li>
+                <?php endif; ?>
+                
+                <li><hr class="dropdown-divider my-1"></li>
+                <li><a class="dropdown-item text-danger py-2 px-3 fw-bold" href="<?= $base_url ?>auth/logout.php">Keluar</a></li>
+            </ul>
+        </div>
+
+    <?php else: ?>
+
+        <div class="d-flex align-items-center gap-3">
+            <a href="<?= $base_url ?>auth/login.php" class="btn rounded-pill px-4 py-2 shadow-none" 
+               style="border: 1px solid #d1d5db; color: #4b5563; font-size: 14px; font-weight: 500; background-color: transparent; transition: all 0.2s ease;">
+               Masuk
+            </a>
+            <a href="<?= $base_url ?>auth/register.php" class="btn rounded-pill px-4 py-2 shadow-none" 
+               style="background-color: #FFC107; color: #000; font-size: 14px; font-weight: 600; border: none; transition: all 0.2s ease;">
+               Daftar
+            </a>
+        </div>
+        
+    <?php endif; ?>
+</div>
         </div>
     </nav>
