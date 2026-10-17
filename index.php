@@ -1,5 +1,17 @@
 <?php
 session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+if (isset($_SESSION['id_user'])) {
+    if ($_SESSION['role'] === 'superadmin') {
+        header("Location: admin_page/dashboard.php");
+        exit;
+    } elseif ($_SESSION['role'] === 'kasir') {
+        header("Location: kasir_page/dashboard.php");
+        exit;
+    }
+}
 require_once 'includes/koneksi.php';
 include 'includes/header.php';
 
@@ -7,10 +19,7 @@ $is_pelanggan = isset($_SESSION['id_user']) && $_SESSION['role'] === 'pelanggan'
 $link_pesan = $is_pelanggan ? "pelanggan_page/pemesanan.php" : "auth/login.php";
 ?>
 
-<!-- KONTEN UTAMA DIBUNGKUS GRADASI -->
 <main class="main-gradient-bg">
-
-    <!-- HERO SECTION -->
     <section class="container-fluid px-5 py-4" id="home">
         <div class="hero-box position-relative rounded-5 overflow-hidden shadow-lg d-flex align-items-center" style="min-height: 400px; background: url('assets/img/hero_FL.jpg') center/cover;">
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(90deg, rgba(74, 21, 75, 0.8) 0%, rgba(181, 126, 220, 0.4) 100%);"></div>

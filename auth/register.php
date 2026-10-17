@@ -74,7 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             position: relative;
             min-height: 100vh;
             padding: 40px 24px 64px;
-            /* Gradasi asli milikmu */
             background: linear-gradient(180deg, #ffffff 0%, #f1d5e4 35%, #d896bb 70%, #c562a6 100%);
         }
         .btn-kembali {
@@ -176,8 +175,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <h2 class="judul-auth">Buat Akun Baru</h2>
-
-    <!-- BUNGKUSAN FORM DAN ALERT (Agar lebarnya sama persis) -->
     <div class="form-auth-wrapper">
         
         <?php if (!empty($error)): ?>

@@ -224,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="submit" class="btn btn-login w-100">Log in</button>
 
                 <div class="text-center mt-3" style="font-size: 12px;">
-                    <a href="#" class="link-ungu d-block mb-2" style="font-weight: 500;">Saya lupa password</a>
+                   <a href="lupa_password.php" class="link-ungu d-block mb-2" style="font-weight: 500;">Saya lupa password</a>
                     <span>Belum punya akun?
                         <a href="<?= $base_url ?>auth/register.php" class="link-ungu">Daftar sekarang.</a>
                     </span>

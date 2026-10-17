@@ -1,11 +1,10 @@
 <?php 
 session_start();
-if (!isset($_SESSION['id_user']) || $_SESSION['role'] !== 'pelanggan') {
+if (!isset($_SESSION['id_user']) || $_SESSION['role'] !== 'kasir') {
     header("Location: ../auth/login.php");
     exit;
 }
 require_once '../includes/koneksi.php';
-include '../includes/header.php'; 
 ?>
 
 <main class="container-fluid my-4 px-5" style="min-height: 60vh;">
@@ -19,5 +18,3 @@ include '../includes/header.php';
         </div>
     </div>
 </main>
-
-<?php include '../includes/footer.php'; ?>

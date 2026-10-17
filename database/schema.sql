@@ -74,3 +74,8 @@ CREATE TABLE notifikasi (
   status_kirim ENUM('Menunggu','Terkirim','Gagal') NOT NULL DEFAULT 'Menunggu',
   FOREIGN KEY (id_pesanan) REFERENCES pesanan(id_pesanan)
 ) ENGINE=INNODB;
+
+-- lupapassword
+ALTER TABLE user 
+ADD otp_code VARCHAR(10) NULL,
+ADD otp_expired DATETIME NULL;
